@@ -1,5 +1,26 @@
 /* TODO code the dashboard layout using the grid */
+.dashboard{
+  display: grid;
+  grid-template-columns: 400px 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  height: calc(100vh - 110px);
+}
 
+.dashboard .main {
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 1;
+}
+
+.dashboard .description {
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 3;
+}
+
+@media (max-width: 900px) {
+  .dashboard {
+    display: block;
+  }
+}
 
 /* Some basic design for white cards */
 .dashboard-card {
